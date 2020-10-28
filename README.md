@@ -4,11 +4,11 @@
 # MicroBit
 ![image info](./public/style/bitman.png)
 
-
+ 
 ___Description___
 
-This web application is build for collecting data from BBC microbit sensors and displaying room temperature, light levels during day/night and store all incoming information from the sensors in the database overtime.
-
+This web application is build for collecting data from BBC microbit sensors and displaying room temperature, light levels during day/night and store all incoming information from the sensors in the database overtime. 
+ 
  ___Web application functionalities___
 * A database to store the data
 * Possibility to watch the data collection in a terminal as it collects live.
@@ -28,15 +28,23 @@ You can use any common browser(not internet Explorer).
 ###### Terminal
 A terminal is also needed. You can use e.g cygwin or powershell.
 ###### Npm & Node.js
-Project Microbit is built with npm and Node.js, type "npm install" to get all the used dependencies in this project.
+Project Microbit is built with npm and Node.js, type `npm install` to get all the used dependencies in this project.
 ###### Python and PIP
-The script is in python so python must be installed on your system. Pip is also used and the dependencies choosen are Serial, MicroPython and MYSQL-connector.
+The script is in python so python must be installed on your system. Pip is also used and the dependencies choosen are Serial, pytz and MYSQL-connector.
+`pip install pyserial`
+`pip install mysql-connector`
+`pip install pytz`
 ###### MySql
-Database is created with Mysql and to create the database there is a bash script(sql/reset.bash) that can be run in a terminal to setup the database.
+Database is created with Mysql.
 
 ## Guide for running the program
+
 ###### Step1: Setup the database
-Setup the database with bash.reset or setup.sql and after ddl.sql
+Setup the database with setup.sql and after ddl.sql. First navigate to projectfolder/sql then run the following commands in the terminal.
+  * First run this command to create database sensors.<br>
+ `mysql -uroot -p < setup.sql`
+  * Run this command to create tables.<br>
+ `mysql -uroot -p sensors < ddl.sql`
 ###### Step2: Transfer code to sensors
 The python script can be uploaded to the sensors by using an online pythoneditor e.g https://python.microbit.org/v/1.1
 Transfer LoadReceiver.py to a sensor that you want it to be a reciever(R) to recieve data from other microbits.
@@ -57,5 +65,5 @@ Open a terminal and navigate yourself to the project folder and to start collect
 The information can be shown if clicked on sensors names.
 
 
----
-You can read more about BBC Microbit here [Link](https://microbit.org/)
+--- 
+You can read more about BBC Microbit here [Link](https://microbit.org/) 
