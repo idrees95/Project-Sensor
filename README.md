@@ -30,10 +30,10 @@ A terminal is also needed. You can use e.g cygwin or powershell.
 ###### Npm & Node.js
 Project Microbit is built with npm and Node.js, type `npm install` to get all the used dependencies in this project.
 ###### Python and PIP
-The script is in python so python must be installed on your system. Pip is also used and the dependencies choosen are Serial, pytz and MYSQL-connector.
-`pip install pyserial`
-`pip install mysql-connector`
-`pip install pytz`
+The script is in python so python must be installed on your system. Pip is also used and the dependencies choosen are Serial, pytz and MYSQL-connector.<br>
+`pip install pyserial`<br>
+`pip install mysql-connector`<br>
+`pip install pytz`<br>
 ###### MySql
 Database is created with Mysql.
 
